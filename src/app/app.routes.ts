@@ -1,3 +1,9 @@
-import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+import { Routes } from '@angular/router';
+import { MuralRecados } from './mural-recados/mural-recados';
+
+export const routes: Routes = [
+
+    {path: 'app.mural-recados', component: MuralRecados}
+];
+ 

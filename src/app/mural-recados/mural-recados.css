@@ -1,0 +1,77 @@
+.mural {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  border-color: #020000;
+}
+
+.lista-recados {
+  list-style: inside;
+  padding: 0;
+}
+
+.lista-recados li {
+  background: #b7b5b5;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.lista-recados li.ativo {
+  background: #8ca2b7;
+  border: 1px solid #1565c0;
+}
+
+.recado-detalhe {
+  background: #d27878;
+  border: 1px solid #a24d4d;
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.recado-detalhe.lido {
+  background: #e6ffe6;
+  border-color: #2e7d32;
+}
+
+.vazio {
+  color: #888;
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.novo-recado {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.novo-recado input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #020000;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #1565c0;
+  color: white;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.curtidas {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

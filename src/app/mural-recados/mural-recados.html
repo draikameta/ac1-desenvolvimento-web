@@ -1,0 +1,34 @@
+<div class="mural">
+  <h1>Mural de Recados - AC1 Desenvolvimento Web Front-End</h1>
+
+  <ul class="lista-recados">
+    @for (recado of recados; track recado) {
+      <li (click)="selecionar(recado)" [class.ativo]="recado === recadoSelecionado">
+        {{ recado }}
+      </li>
+    }
+  </ul>
+
+  @if (recadoSelecionado) {
+    <div class="recado-detalhe" [class.lido]="lido">
+      <p>{{ recadoSelecionado }}</p>
+      <button (click)="alternarLido()">{{ lido ? 'Lido' : 'Não lido' }}</button>
+    </div>
+  } @else {
+    <p class="vazio">Nenhum recado foi selecionado</p>
+  }
+
+  <div class="novo-recado">
+    <input
+      type="text"
+      [(ngModel)]="novoRecado"
+      (keyup.enter)="publicar()"
+      placeholder="Digite seu recado!" />
+    <button (click)="publicar()" [disabled]="!novoRecado.trim()">Postar</button>
+  </div>
+
+  <div class="curtidas">
+    <button (click)="curtir()">Curtir</button>
+    <span>{{ curtidas }} curtida(s)</span>
+  </div>
+</div>

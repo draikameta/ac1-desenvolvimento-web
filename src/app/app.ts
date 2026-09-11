@@ -1,8 +1,9 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { MuralRecados } from './mural-recados/mural-recados'; 
 
 @Component({
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, MuralRecados], 
   selector: 'app-root',
   styleUrl: './app.css',
   templateUrl: './app.html',
